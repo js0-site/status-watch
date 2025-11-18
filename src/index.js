@@ -10,7 +10,7 @@ const check = async (env) => {
     now = int(new Date() / 6e4);
 
   p.get("status:ts");
-  // p.setex("status-watch:ts", 864e3, now);
+  p.setex("status-watch:ts", 864e3, now);
   const ts = (await p.exec())[0][1];
   redis.disconnect();
 
