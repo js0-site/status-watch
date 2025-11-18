@@ -1,0 +1,10 @@
+name = "status-watch"
+main = "src/index.js"
+compatibility_date = "2025-11-18"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[triggers]
+crons = ["* * * * *"]
