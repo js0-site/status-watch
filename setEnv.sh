@@ -7,8 +7,8 @@ cd $DIR
 rm -f .dev.vars
 
 setEnv() {
-	echo "$2" | wrangler secret put $1
 	echo "$1=\"$2\"" >>.dev.vars
+	echo "$2" | wrangler secret put $1
 }
 
 setEnv R "$(bun -e 'import R from "../conf/status/REDIS.js"; console.log(`redis://${R.username}:${R.password}@${R.host}:${R.port}/${R.db}`)')"
