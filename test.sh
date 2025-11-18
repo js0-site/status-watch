@@ -13,6 +13,8 @@ while ! nc -z localhost 8787; do
 done
 
 curl "http://localhost:8787/__scheduled?cron=*+*+*+*+*"
+oxfmt
+oxlint
 sleep 3
 kill -INT $BUN_PID
 wait $BUN_PID

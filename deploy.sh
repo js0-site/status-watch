@@ -5,4 +5,6 @@ DIR=$(realpath $0) && DIR=${DIR%/*}
 cd $DIR
 set -x
 
+oxfmt
+oxlint
 bun run deploy
